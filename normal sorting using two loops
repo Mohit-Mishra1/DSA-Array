@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+void sort(int arr[], int size){
+  int i = 0;
+  while (i<size){
+    int j = i+1;
+    while (j<size){
+      if (arr[j]<arr[i]){
+        swap(arr[i], arr[j]);
+      }
+      j++;
+    }
+    i++;
+  }
+}
+
+
+int main(){
+  int arr[15] = {2,3,1,6,4};
+  sort(arr, 5);
+
+  
+  for (int a = 0; a<5; a++){
+    cout<<arr[a]<<" ";
+  }
+}
