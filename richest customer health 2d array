@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[4][2] = {1,2,3,14,5,60,7,8};
+    int size_row = 4;
+    int size_coloumn = 2;
+
+    int max = 0;
+    int i = 0;
+    while (i<size_row){
+        int sum = 0;
+        int j = 0;
+        while (j<size_coloumn){
+            sum = sum + (arr[i][j]);
+            j++;
+        }
+        if (max<sum){
+            max = sum;
+        }
+        i++;
+    
+    }
+    cout<<max<<endl;
+
+    return 0;
+}
